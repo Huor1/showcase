@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Matthis pretium forecasting</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+    <link rel="stylesheet" href="static/navbar.css">
+    <link rel="stylesheet" href="static/bottombar.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="static/script.js"></script>
+    
+</head>
+<body>
+  <div class="navbar">
+    <div class="Prognostica">Adeptus Prognostica</div>
+    <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    <nav class="nav-bar">
+        <ul>
+            <li>
+                <a href="{{ url_for('Home') }}" class="active">Home</a>
+            </li>
+            <li>
+                <a href="{{ url_for('function1') }}" class="Funkcja1">Funkcja 1</a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/watch?v=WdlIKy2lJ_g" class="Funkcja2">Funkcja 2</a>
+            </li>
+            <li>
+              <a href="{{ url_for('About') }}" class="About">O nas</a>
+          </li>
+            <li>
+                <a href="{{ url_for('Login') }}" class="Login">Login</a>
+            </li>
+            <li>
+                <a href="{{ url_for('Register') }}" class="Register">Register</a>
+            </li>
+            
+            <li>
+                    <div id="flag1" class="flag-item" >
+                      <img src="static/PL_flag.svg.png" alt="Flag 1">
+                    </div>
+                    <div id="flag2" class="flag-item" >
+                        <img src="static/UK_flag.png" alt="Flag 2">
+                      </div>
+                      <div id="flag3" class="flag-item" >
+                        <img src="static/SPQR_flag.png" alt="Flag 3">
+                      </div>
+            </li>
+        </ul>
+    </nav>
+</div>
+    
+    <section>
+        <div class="title">Prognozowanie</div>
+        
+    </section>
+    <section>
+        <div class="Prognozowanie-obszar">
+            <form id="priceForm">
+                <div class="form-row-left">
+                    <label for="offer_type">Sprzedawca:</label>
+                    <select id="offer_type" name="offer_type" required>
+                        <option value="">Wybierz Sprzedawce</option>
+                        <option value="Private">Prywatny</option>
+                        <option value="Estate Agency">Agencja nieruchomości</option>
+                    </select>
+                </div>
+
+                <div class="form-row-left">
+                    <label for="floor">Piętro:</label>
+                        <select id="floor" name="floor" required>
+                            <option value="">Wybierz Piętro</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                        </select>
+                </div>
+
+                <div class="form-row-left">
+                    <label for="area">Metraż:</label>
+                    <input type="number" id="area" name="area" step="0.01" required><br>
+                </div>
+
+                <div class="form-row-left">
+                    <label for="rooms">Liczba pokoi:</label>
+                        <select id="rooms" name="rooms" required>
+                            <option value="">Wybierz Liczbe pokoi</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                </div>
+
+                <div class="form-row-left">
+                    <label for="offer_type_of_building">Typ budynku:</label>
+                        <select id="offer_type_of_building" name="offer_type_of_building" required>
+                            <option value="">Wybierz Typ budynku</option>
+                            <option value="Apartament Building">Apartament</option>
+                            <option value="Housing Block">Blok mieszkalny</option>
+                            <option value="Tenement">Kamienica</option>
+                            <option value="Loft">Poddasze</option>
+                            <option value="Other">Inny</option>
+                        </select>
+                </div>
+
+                <div class="form-row-right">
+                    <label for="market">Market:</label>
+                    <select id="market" name="market" required>
+                        <option value="">Wybierz rodzaj marketu</option>
+                        <option value="primary">Pierwotny</option>
+                        <option value="aftermarket">Wtórny</option>
+                    </select>
+                </div>
+
+                <div class="form-row-right">
+                    <label for="voivodeship">Województwo:</label>
+                        <select id="voivodeship" name="voivodeship" required>
+                            <option value="">Wybierz Województwo</option>
+                        </select>
+                </div>
+
+                <div class="form-row-right">
+                    <label for="city_name">Miasto:</label>
+                        <select id="city_name" name="city_name" required>
+                            <option value="">Wybierz Miasto</option>
+                        </select>
+                </div>
+
+                <button type="submit">Szacuj cenę</button>
+            </form>
+    
+            <div id="result">
+                <br>
+                <h2>Szacowana cena: <span id="estimatedPrice" style="color:white;font-weight:bold"></span> zł</h2>
+                <br>
+                <br>
+                <br>
+            </div>
+  
+        </div>
+        <img id="zdjecie-prawo" src="static/Palac.jpg" alt="Zdjęcie-prawo" class="palac-image" >
+    </section>
+    <footer>
+        <div class="Pasek_dolny">
+            <div class="Pasek_dolny_lewy">
+                <span class="Wersja_programu">Wersja programu: Beta 0.98.3</span>
+            </div>
+            <div class="Pasek_dolny_prawy">
+                <span class="Autorzy">Autorzy: Jakub Kołodziej i Piotr Wieczorek</span>
+            </div>
+        </div>
+    </footer>
+    <script src="/usr/share/javascript/jquery/jquery.min.js"></script>
+    <audio id="background-music" loop>
+      <source src="static/divinitus.mp3" type="audio/mpeg">
+    </audio>
+    <script src="static/script.js"></script>
+</body>
+</html>

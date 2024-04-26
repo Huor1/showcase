@@ -1,0 +1,25 @@
+.Pasek_dolny {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: linear-gradient(to bottom, #333, #666);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    z-index: 9999;
+  }
+/*Stylizacja napisu wersja programu*/
+  .Wersja_programu {
+    color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+/*Stylizacja napisu Autorzy*/
+  .Autorzy {
+    color: #fff;
+    margin: 0;
+    padding: 0;
+  }

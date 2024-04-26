@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Matthis pretium forecasting</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="static/style_func1.css">
+    <link rel="stylesheet" href="static/navbar.css">
+    <link rel="stylesheet" href="static/bottombar.css">
+    <script src="static/script_function1.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<div class="navbar">
+    <div class="Prognostica">Adeptus Prognostica</div>
+    <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    <nav class="nav-bar">
+        <ul>
+            <li><a href="{{ url_for('Home') }}" class="active">Home</a></li>
+            <li><a href="{{ url_for('function1') }}" class="Funkcja1">Funkcja 1</a></li>
+            <li><a href="https://www.youtube.com/watch?v=WdlIKy2lJ_g" class="Funkcja2">Funkcja 2</a></li>
+            <li><a href="{{ url_for('About') }}" class="About">O nas</a></li>
+            <li><a href="{{ url_for('Login') }}" class="Login">Login</a></li>
+            <li>
+                <a href="{{ url_for('Register') }}" class="Register">Register</a>
+            </li>
+            <li>
+                <div id="flag1" class="flag-item"><img src="static/PL_flag.svg.png" alt="Flag 1"></div>
+                <div id="flag2" class="flag-item"><img src="static/UK_flag.png" alt="Flag 2"></div>
+                <div id="flag3" class="flag-item"><img src="static/SPQR_flag.png" alt="Flag 3"></div>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<section>
+    <div class="title" id="functionTitle">Estymowanie cen auta</div>
+</section>
+<section>
+    <div class="Prognozowanie-obszar">
+        <form id="priceForm">
+            <div class="form-row-left">
+                <label for="Mark">Marka:</label>
+                <select id="Mark" name="Mark" required>
+                    <option value="">Wybierz Model</option>
+                </select>
+            </div>
+            <div class="form-row-left">
+                <label for="Model">Model:</label>
+                <select id="Model" name="Model" required>
+                    <option value="">Wybierz model</option>
+                </select>
+            </div>
+            <div class="form-row-left">
+                <label for="Year">Rok:</label>
+                <input type="number" id="Year" name="Year" required><br>
+            </div>
+            <div class="form-row-left">
+                <label for="Mileage">Przebieg:</label>
+                <input type="number" id="Mileage" name="Mileage" required><br>
+            </div>
+            <div class="form-row-left">
+                <label for="Vol_engine">Poj. silnika:</label>
+                <input type="number" id="Vol_engine" name="Vol_engine" required><br>
+            </div>
+            <div class="form-row-left">
+                <label for="Fuel">Paliwo:</label>
+                <select id="Fuel" name="Fuel" required>
+                    <option value="">Wybierz paliwo</option>
+                    <option value="Benzyna">Benzyna</option>
+                    <option value="Diesel">Diesel</option>
+                    <option value="Elektryczny">Elektryczny</option>
+                    <option value="Hybrydowy">Hybrydowy</option>
+                    <option value="LPG">LPG</option>
+                </select>
+            </div>
+            <button type="submit">Szacuj cenę</button>
+        </form>
+        <div id="result">
+            <br>
+            <h2>Szacowana cena: <span id="estimatedPrice" style="color:white;font-weight:bold"></span> zł</h2>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="Pasek_dolny">
+        <div class="Pasek_dolny_lewy">
+            <span class="Wersja_programu">Wersja programu: Beta 0.98.3</span>
+        </div>
+        <div class="Pasek_dolny_prawy">
+            <span class="Autorzy">Autorzy: Jakub Kołodziej i Piotr Wieczorek</span>
+        </div>
+    </div>
+</footer>
+
+<script src="static/script_function1.js"></script>
+<script src="/usr/share/javascript/jquery/jquery.min.js"></script>
+<audio id="background-music" loop>
+    <source src="static/divinitus.mp3" type="audio/mpeg">
+</audio>
+</body>
+</html>

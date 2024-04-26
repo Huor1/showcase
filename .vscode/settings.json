@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/7669a5da-37df-4b30-b998-23a0ba12ce19/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/Prognostica123",
+    "appService.deploySubpath": "."
+}

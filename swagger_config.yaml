@@ -1,0 +1,60 @@
+swagger: '2.0'
+info:
+  title: 'API Estymacji Ceny Nieruchomości'
+  description: 'API do estymacji ceny nieruchomości na podstawie parametrów'
+  version: '1.0'
+schemes:
+  - 'http'
+consumes:
+  - 'application/x-www-form-urlencoded'
+produces:
+  - 'application/json'
+paths:
+  /estimate_price:
+    post:
+      parameters:
+        - name: offer_type
+          in: formData
+          type: string
+          required: true
+          description: 'Typ oferty'
+        - name: area
+          in: formData
+          type: number
+          format: float
+          required: true
+          description: 'Metraż nieruchomości'
+        - name: rooms
+          in: formData
+          type: integer
+          required: true
+          description: 'Liczba pokoi'
+        - name: offer_type_of_building
+          in: formData
+          type: string
+          required: true
+          description: 'Typ budynku'
+        - name: market
+          in: formData
+          type: string
+          required: true
+          description: 'Rynek'
+        - name: city_name
+          in: formData
+          type: string
+          required: true
+          description: 'Miasto'
+        - name: voivodeship
+          in: formData
+          type: string
+          required: true
+          description: 'Województwo'
+      responses:
+        200:
+          description: 'Estymowana cena'
+          schema:
+            type: object
+            properties:
+              estimated_price:
+                type: number
+                format: float

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/navbar.css">
+    <link rel="stylesheet" href="static/bottombar.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="static/login.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='regislogin.css') }}">
+    <title>Logowanie</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="Prognostica">Adeptus Prognostica</div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li>
+                    <a href="{{ url_for('Home') }}" class="active">Home</a>
+                </li>
+                <li>
+                    <a href="{{ url_for('function1') }}" class="Funkcja1">Funkcja 1</a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=WdlIKy2lJ_g" class="Funkcja2">Funkcja 2</a>
+                </li>
+                <li>
+                  <a href="{{ url_for('About') }}" class="About">O nas</a>
+              </li>
+                <li>
+                    <a href="{{ url_for('Login') }}" class="Login">Login</a>
+                </li>
+                <li>
+                    <a href="{{ url_for('Register') }}" class="Register">Register</a>
+                </li>
+                
+                <li>
+                        <div id="flag1" class="flag-item" >
+                          <img src="static/PL_flag.svg.png" alt="Flag 1">
+                        </div>
+                        <div id="flag2" class="flag-item" >
+                            <img src="static/UK_flag.png" alt="Flag 2">
+                          </div>
+                          <div id="flag3" class="flag-item" >
+                            <img src="static/SPQR_flag.png" alt="Flag 3">
+                          </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="box"> 
+        <div class="form">
+            <h1 class="Logowanie">Logowanie</h1>
+            <form method="POST" action="/login">
+                <div class="inputBox">
+                    
+                    <input type="text" id="username" name="username" required>
+                    <span class="username">Nazwa użytkownika</span>
+                    <i></i>
+                </div>
+                <div class="inputBox">
+                    
+                    <input type="password" id="password" name="password" required>
+                    <span class="password">Hasło</span>
+                    <i></i>
+                </div>
+                <input type="submit" value="Login" class="login-button">
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="Pasek_dolny">
+            <div class="Pasek_dolny_lewy">
+                <span class="Wersja_programu">Wersja programu: Beta 0.98.3</span>
+            </div>
+            <div class="Pasek_dolny_prawy">
+                <span class="Autorzy">Autorzy: Jakub Kołodziej i Piotr Wieczorek</span>
+            </div>
+        </div>
+    </footer>
+    <script src="/usr/share/javascript/jquery/jquery.min.js"></script>
+    <audio id="background-music" loop>
+      <source src="static/divinitus.mp3" type="audio/mpeg">
+    </audio>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About us</title>
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="static/navbar.css">
+    <link rel="stylesheet" href="static/about.css">
+    <link rel="shortcut icon" href="{{url_for('static',filename='house.ico')}}">
+    <script src="static/navbar.js"></script>
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="Prognostica">Adeptus Prognostica</div>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <nav class="nav-bar">
+                <ul>
+                    <li>
+                        <a href="{{ url_for('Home') }}" class="active">Home</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('function1') }}">Funkcja 1</a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/watch?v=WdlIKy2lJ_g" class="Funkcja2">Funkcja 2</a>
+                    </li>
+                    <li>
+                      <a href="{{ url_for('About') }}" class="About">O nas</a>
+                  </li>
+                    <li>
+                        <a href="{{ url_for('Login') }}" class="Login">Login</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('Register') }}" class="Register">Register</a>
+                    </li>
+                    <li>
+                            <div id="flag1" class="flag-item" >
+                              <img src="static/PL_flag.svg.png" alt="Flag 1">
+                            </div>
+                            <div id="flag2" class="flag-item" >
+                                <img src="static/UK_flag.png" alt="Flag 2">
+                              </div>
+                              <div id="flag3" class="flag-item" >
+                                <img src="static/SPQR_flag.png" alt="Flag 3">
+                              </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <section class="hero">
+            <div class="heading">
+                <h1>O nas</h1>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <h2>Witamy na naszej stronie</h2>
+                    <p>Jesteśmy absolwentami Politechniki Śląskiej kierunku Automatyka i Robotyka, którą skończyliśmy
+                     z wysokimi notami i ogromną wiedzą inżynierską którą wykorzystujemy na codzień w naszym zawodzie programisty PLC w obszarze automotive (AUDI, BMW, FORD) 
+                     ale i nie tylko, jesteśmy pasjonatami wszelakiego programowania od prostych układów ARDUINO do skomplikowanych linii przemysłowych. Nasza praca magisterska była dla nas ogromnym wyzwaniem podczas którego wiele się nauczyliśmy
+                     i dowiedzieliśmy z zakresu frontend'u, backend'u, machine learning'u i Azure'a. Naszym marzeniem jest ciągły rozwój umiejętności programistycznych i doskonalenie się zawodowo. Dziękujemy za odwiedzenie naszej strony.</p>
+                </div>
+                <div class="hero-image">
+                    <img src="static/zdjSPQR.jpg" >
+                </div>
+            </div>
+        </section>
+        <script src="/usr/share/javascript/jquery/jquery.min.js"></script>
+<audio id="background-music" loop>
+    <source src="divinitus.mp3" type="audio/mpeg">
+  </audio>
+    </body>
+</html>

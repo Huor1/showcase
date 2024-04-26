@@ -1,0 +1,297 @@
+
+.title {
+  font-weight: bolder;
+  font-size: 2.5rem;
+  font-family: Impact;
+  text-shadow: 0 0 3px rgb(255, 255, 255);
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  position: absolute;
+  top: 15%;
+  right: 10%;
+  left: 10%;
+  
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('zdj1.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  transition: background-image 0.5s ease-in-out;
+  background-attachment: fixed;
+  font-family: Arial;
+  color: rgb(0, 0, 0);
+  background-color: aliceblue;
+}
+
+
+.Prognozowanie-obszar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 70%;
+  height: 70%;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid black;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.powierzchnia-tekst {
+  background-image: linear-gradient(to top, #d8c6c6, #949090);
+color: #aa10be;
+font-size: 16px;
+font-weight: bold;
+margin-right: 0px;
+padding: 11px; /* Dodaj odpowiednią wartość w pikselach lub inną jednostkę */
+}
+
+.input {
+  width: 100px;
+  height: 30px;
+  border: 1px solid #333;
+  padding: 5px;
+}
+
+#offer_type{
+  background-image: linear-gradient(to top, #d8c6c6, #949090);
+  color: #000000;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-left: 0%;
+  padding: 3%; /* Dodaj odpowiednią wartość w pikselach lub inną jednostkę */
+}
+
+label {
+  background-color: #f2f2f2; /* Szary tło dla etykiety */
+  padding: 5px 10px; /* Padding wewnątrz prostokąta */
+  border-radius: 4px; /* Lekko zaokrąglone rogi */
+  display: inline-block; /* Etykieta jako element liniowo-blokowy */
+  margin-bottom: 5px; /* Margines poniżej etykiety */
+  font-size: 14px; /* Mniejszy rozmiar czcionki dla etykiet */
+  color: #333; /* Ciemnoszary tekst */
+  width: calc(100% - 20px); /* Szerokość etykiety dostosowana do paddingu */
+  box-sizing: border-box; /* Aby padding nie wpływał na zewnętrzne wymiary */
+}
+
+#area {
+  background-image: linear-gradient(to top, #d8c6c6, #949090);
+  color: #000000;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-left: 0%;
+  padding: 3%; /* Dodaj odpowiednią wartość w pikselach lub inną jednostkę */
+}
+
+label {
+  background-color: #f2f2f2; /* Szary tło dla etykiety */
+  padding: 5px 10px; /* Padding wewnątrz prostokąta */
+  border-radius: 4px; /* Lekko zaokrąglone rogi */
+  display: inline-block; /* Etykieta jako element liniowo-blokowy */
+  margin-bottom: 5px; /* Margines poniżej etykiety */
+  font-size: 14px; /* Mniejszy rozmiar czcionki dla etykiet */
+  color: #333; /* Ciemnoszary tekst */
+  width: calc(100% - 20px); /* Szerokość etykiety dostosowana do paddingu */
+  box-sizing: border-box; /* Aby padding nie wpływał na zewnętrzne wymiary */
+}
+
+#rooms {
+  background-image: linear-gradient(to top, #d8c6c6, #949090);
+  color: #000000;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-left: 0%;
+  padding: 3%; /* Dodaj odpowiednią wartość w pikselach lub inną jednostkę */
+}
+
+label {
+  background-color: #f2f2f2; /* Szary tło dla etykiety */
+  padding: 5px 10px; /* Padding wewnątrz prostokąta */
+  border-radius: 4px; /* Lekko zaokrąglone rogi */
+  display: inline-block; /* Etykieta jako element liniowo-blokowy */
+  margin-bottom: 5px; /* Margines poniżej etykiety */
+  font-size: 14px; /* Mniejszy rozmiar czcionki dla etykiet */
+  color: #333; /* Ciemnoszary tekst */
+  width: calc(100% - 20px); /* Szerokość etykiety dostosowana do paddingu */
+  box-sizing: border-box; /* Aby padding nie wpływał na zewnętrzne wymiary */
+}
+
+#floor {
+  background-image: linear-gradient(to top, #d8c6c6, #949090);
+  color: #000000;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-left: 0%;
+  padding: 3%; /* Dodaj odpowiednią wartość w pikselach lub inną jednostkę */
+}
+
+#offer_type_of_building{
+  background-image: linear-gradient(to top, #d8c6c6, #949090);
+  color: #000000;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-left: 0%;
+  padding: 3%; /* Dodaj odpowiednią wartość w pikselach lub inną jednostkę */
+}
+
+label {
+  background-color: #f2f2f2; /* Szary tło dla etykiety */
+  padding: 5px 10px; /* Padding wewnątrz prostokąta */
+  border-radius: 4px; /* Lekko zaokrąglone rogi */
+  display: inline-block; /* Etykieta jako element liniowo-blokowy */
+  margin-bottom: 5px; /* Margines poniżej etykiety */
+  font-size: 14px; /* Mniejszy rozmiar czcionki dla etykiet */
+  color: #333; /* Ciemnoszary tekst */
+  width: calc(100% - 20px); /* Szerokość etykiety dostosowana do paddingu */
+  box-sizing: border-box; /* Aby padding nie wpływał na zewnętrzne wymiary */
+}
+
+#market {
+  background-image: linear-gradient(to top, #d8c6c6, #949090);
+  color: #000000;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-left: 0%;
+  padding: 3%; /* Dodaj odpowiednią wartość w pikselach lub inną jednostkę */
+}
+
+label {
+  background-color: #f2f2f2; /* Szary tło dla etykiety */
+  padding: 5px 10px; /* Padding wewnątrz prostokąta */
+  border-radius: 4px; /* Lekko zaokrąglone rogi */
+  display: inline-block; /* Etykieta jako element liniowo-blokowy */
+  margin-bottom: 5px; /* Margines poniżej etykiety */
+  font-size: 14px; /* Mniejszy rozmiar czcionki dla etykiet */
+  color: #333; /* Ciemnoszary tekst */
+  width: calc(100% - 20px); /* Szerokość etykiety dostosowana do paddingu */
+  box-sizing: border-box; /* Aby padding nie wpływał na zewnętrzne wymiary */
+}
+
+#city_name {
+  background-image: linear-gradient(to top, #d8c6c6, #949090);
+  color: #000000;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-left: 0%;
+  padding: 3%; /* Dodaj odpowiednią wartość w pikselach lub inną jednostkę */
+}
+
+label {
+  background-color: #f2f2f2; /* Szary tło dla etykiety */
+  padding: 5px 10px; /* Padding wewnątrz prostokąta */
+  border-radius: 4px; /* Lekko zaokrąglone rogi */
+  display: inline-block; /* Etykieta jako element liniowo-blokowy */
+  margin-bottom: 5px; /* Margines poniżej etykiety */
+  font-size: 14px; /* Mniejszy rozmiar czcionki dla etykiet */
+  color: #333; /* Ciemnoszary tekst */
+  width: calc(100% - 20px); /* Szerokość etykiety dostosowana do paddingu */
+  box-sizing: border-box; /* Aby padding nie wpływał na zewnętrzne wymiary */
+}
+
+#city_name {
+  background-image: linear-gradient(to top, #d8c6c6, #949090);
+  color: #000000;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-left: 0%;
+  padding: 3%; /* Dodaj odpowiednią wartość w pikselach lub inną jednostkę */
+}
+
+label {
+  background-color: #f2f2f2; /* Szary tło dla etykiety */
+  padding: 5px 10px; /* Padding wewnątrz prostokąta */
+  border-radius: 4px; /* Lekko zaokrąglone rogi */
+  display: inline-block; /* Etykieta jako element liniowo-blokowy */
+  margin-bottom: 5px; /* Margines poniżej etykiety */
+  font-size: 14px; /* Mniejszy rozmiar czcionki dla etykiet */
+  color: #333; /* Ciemnoszary tekst */
+  width: calc(100% - 20px); /* Szerokość etykiety dostosowana do paddingu */
+  box-sizing: border-box; /* Aby padding nie wpływał na zewnętrzne wymiary */
+}
+
+#voivodeship {
+  background-image: linear-gradient(to top, #d8c6c6, #949090);
+  color: #000000;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-left: 0%;
+  padding: 3%; /* Dodaj odpowiednią wartość w pikselach lub inną jednostkę */
+}
+
+label {
+  background-color: #f2f2f2; /* Szary tło dla etykiety */
+  padding: 5px 10px; /* Padding wewnątrz prostokąta */
+  border-radius: 4px; /* Lekko zaokrąglone rogi */
+  display: inline-block; /* Etykieta jako element liniowo-blokowy */
+  margin-bottom: 5px; /* Margines poniżej etykiety */
+  font-size: 14px; /* Mniejszy rozmiar czcionki dla etykiet */
+  color: #333; /* Ciemnoszary tekst */
+  width: calc(100% - 20px); /* Szerokość etykiety dostosowana do paddingu */
+  box-sizing: border-box; /* Aby padding nie wpływał na zewnętrzne wymiary */
+}
+
+.prostokatne-pole {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  background-color: #a9e20e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0; /* Przyleganie do dolnej krawędzi kontenera rodzica */
+  
+}
+.palac-image {
+  width: 15%; /* Dostosuj szerokość obrazka według potrzeb */
+  height: 70%; /* Dostosuj wysokość obrazka według potrzeb */
+  position: absolute;
+  top: 25.45%;
+  right: 0.5%;
+}
+.closed {
+  display: none;
+}
+
+.form-row-left {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form-row-left label {
+  margin-right: 10px;
+  width: 150px; /* Dostosuj szerokość etykiety według potrzeb */
+}
+
+.form-row-right {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form-row-right label {
+  margin-right: 10px;
+  width: 150px; /* Dostosuj szerokość etykiety według potrzeb */
+}

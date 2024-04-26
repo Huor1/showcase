@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="static/navbar.css">
+    <link rel="stylesheet" href="static/test_loginu.css">
+    <script src="static/navbar.js"></script>
+    
+    <script src="https://kit.fontawesome.com/091388427a.js" crossorigin="anonymous"></script>
+    
+
+</head>
+<!--Odtąd kopiuj pasek nawigacyjny do każdego htmla-->
+<body>
+    <div class="navbar">
+        <div class="Prognostica">Adeptus Prognostica</div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li>
+                    <a href="{{ url_for('Home') }}" class="active">Home</a>
+                </li>
+                <li>
+                    <a href="{{ url_for('function1') }}">Funkcja 1</a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/watch?v=WdlIKy2lJ_g" class="Funkcja2">Funkcja 2</a>
+                </li>
+                <li>
+                  <a href="{{ url_for('About') }}" class="About">O nas</a>
+              </li>
+                <li>
+                    <a href="{{ url_for('Login') }}" class="Login">Login</a>
+                </li>
+                <li>
+                        <div id="flag1" class="flag-item" >
+                          <img src="static/PL_flag.svg.png" alt="Flag 1">
+                        </div>
+                        <div id="flag2" class="flag-item" >
+                            <img src="static/UK_flag.png" alt="Flag 2">
+                          </div>
+                          <div id="flag3" class="flag-item" >
+                            <img src="static/SPQR_flag.png" alt="Flag 3">
+                          </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!--Aż dotąd kopiowanie paska nawigacyjnego-->
+<div class="container">
+    <div class="form-box">
+        <h1 id="title">Sign Up</h1>
+        <form>
+            <div class="input-group">
+                <div class="input-field" id="nameField">
+                    <i class="fa-solid fa-user-ninja"></i>
+                    <input type="text" class="Name" placeholder="Name">
+                </div>
+
+                <div class="input-field">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" class="Email" placeholder="Email">
+                </div>
+
+                <div class="input-field">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" class="Password" placeholder="Password">
+                </div>
+                <p>Lost password <a href="#">Click Here!</a></p>
+            </div>
+            <div class="btn-field">
+                <button type="button" id="signupBtn">Sign up</button>
+                <button type="button" id="signinBtn" class="disable">Sign in </button>
+
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+
+/*kod do loginu*/
+let signupBtn = document.getElementById("signupBtn");
+let signinBtn = document.getElementById("signinBtn");
+let nameField = document.getElementById("nameField");
+let title = document.getElementById("title");
+
+signinBtn.onclick = function(){
+    nameField.style.maxHeight = "0";
+    title.innerHTML ="Sign In";
+    signupBtn.classList.add("disable");
+    signinBtn.classList.remove("disable");
+
+}
+
+signupBtn.onclick = function(){
+    nameField.style.maxHeight = "60px";
+    title.innerHTML ="Sign Up";
+    signupBtn.classList.add("disable");
+    signinBtn.classList.remove("disable");
+
+}
+
+
+</script>
+<!--ten skrypt i audio tez do paska nawigacyjnego jest potrzebne-->
+<script src="/usr/share/javascript/jquery/jquery.min.js"></script>
+<audio id="background-music" loop>
+    <source src="static/divinitus.mp3" type="audio/mpeg">
+  </audio>
+</body>
+</html>
