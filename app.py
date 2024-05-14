@@ -96,12 +96,8 @@ def function1():
 
 @app.route("/carsPriceEstimation", methods=["POST"])
 def carsPriceEstimation():
-
     request_data = request.json
 
-
-
-    
     new_request_data = pd.DataFrame({
         'mark': [request_data.get("mark")],
         'model': [request_data.get("model")],
@@ -139,7 +135,8 @@ def carsPriceEstimation():
 
 if __name__ == '__main__':
     # app.run()
-    app.run(debug=True)
+    # app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0', port=8000)
 
 
 
